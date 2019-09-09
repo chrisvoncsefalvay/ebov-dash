@@ -23,9 +23,9 @@ dockerised Dash apps on AWS.
 
 To run a local instance, the easiest way is to build the Docker image:
 
-1. Build the image using `docker build -t agco-dash .`. 
+1. Build the image using `docker build -t ebov-dash .`. 
 
-2. Run the image using `docker run -p 80:8080 agco-dash:latest`.
+2. Run the image using `docker run -p 80:8080 ebov-dash:latest`.
 
 3. Use your browser to navigate to `127.0.0.1:8080` to view the application.
 
@@ -37,9 +37,9 @@ ECR, then re-deploy.
 1. Run `$(aws ecr get-login --no-include-email --region eu-central-1)` 
 to authenticate your shell.
 
-2. Build the image using `docker build -t agco-dash .`.
+2. Build the image using `docker build -t ebov-dash .`.
 
-3. Tag the image using `docker tag agco-dash:latest <your account id>.dkr.ecr.<your AWS region>.amazonaws.com/ebov-dash:latest`.
+3. Tag the image using `docker tag ebov-dash:latest <your account id>.dkr.ecr.<your AWS region>.amazonaws.com/ebov-dash:latest`.
 
 4. Push the image to AWS ECR using `docker push <your account id>.dkr.ecr.<your AWS region>.amazonaws.com/ebov-dash:latest`.
 
